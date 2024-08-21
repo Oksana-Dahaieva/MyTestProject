@@ -8,12 +8,12 @@ pipeline {
                 git 'https://github.com/Oksana-Dahaieva/MyTestProject.git'
             }
         }
-        stage('Build') {
-            steps {
-                // Сборка проекта с помощью Maven
-                sh 'mvn clean install'
-            }
-        }
+//        stage('Build') {
+//            steps {
+//                // Сборка проекта с помощью Maven
+//                sh 'mvn clean install'
+//            }
+//        }
         stage('Run Tests') {
             steps {
                 // Запуск тестов с помощью Maven, указание класса раннера
