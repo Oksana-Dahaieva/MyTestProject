@@ -1,6 +1,7 @@
 package org.example.manager;
 
 import org.example.pages.HomePage;
+import org.example.pages.ProductsPage;
 import org.example.pages.SignInPage;
 import org.openqa.selenium.WebDriver;
 
@@ -20,5 +21,9 @@ public class PageFactoryManager {
 
     public SignInPage getSignInPage(){
         return new SignInPage(driver);
+    }
+
+    public ProductsPage getProductsPage(){
+        return new ProductsPage(driver);
     }
 }

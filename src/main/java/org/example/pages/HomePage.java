@@ -16,6 +16,12 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[contains(text(),'Hello')]")
     WebElement headerMessage;
 
+    @FindBy(xpath = "//input[@type='text']")
+    WebElement searchInput;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    WebElement searchButton;
+
     public void openHomePage(String url) {
         driver.get(url);
     }
@@ -26,5 +32,13 @@ public class HomePage extends BasePage{
 
     public WebElement getMessageFromHeader(){
         return headerMessage;
+    }
+
+    public void searchProduct(String product){
+        searchInput.sendKeys(product);
+    }
+
+    public void clickSearchButton(){
+        searchButton.click();
     }
 }

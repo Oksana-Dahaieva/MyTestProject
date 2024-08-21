@@ -38,8 +38,8 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void waitTextToBePresentInElement(long timeToWait, WebElement element, String text) {
+    public boolean waitTextToBePresentInElement(long timeToWait, WebElement element, String text) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
-        wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+        return wait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }
 }
